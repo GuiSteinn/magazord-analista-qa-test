@@ -4,101 +4,112 @@
 
 </div>
 
-# Teste para vaga de Analista de Qualidade no Magazord.com.br
-Este repositório tem como fim testar os candidatos para vaga de analista de qualidade na empresa [Magazord](https://magazord.com.br).
+# Teste para vaga de Analista de QA (Testes) 
 
-# 1º Cenário:
+Este repositório tem como fim testar os candidatos para vaga de analista de qualidade focado em testes e automação na empresa [Magazord](https://magazord.com.br).
 
-Você está trabalhando como Analista de Qualidade em um projeto de integração de marketplaces de terceiros, como Amazon e Mercado Livre, em um grande e-commerce. A equipe de desenvolvimento concluiu a implementação da integração e você é responsável por realizar os testes para garantir que a funcionalidade esteja funcionando corretamente.
-Um detalhe importante, nessa integração, temos integração de estoque, anúncios, faturamento, pedidos e preço.
+O objetivo deste teste é avaliar sua capacidade de analisar requisitos, criar cenários de testes relevantes, investigar problemas (troubleshooting) e comunicar de forma clara os resultados.
 
-## Sua tarefa:
+---
 
-Descrever detalhadamente o plano de testes que você implementaria para validar a integração com o marketplace. Inclua no seu plano:
+## 1º Cenário: Testes de Integração (Marketplace e ERP)
 
-**1. Documentação e Materiais de Apoio:**
-  - **Identificação da documentação:** Quais documentos e materiais de apoio serão utilizados para embasar o plano de testes? (Ex.: documentação oficial dos marketplaces, especificações técnicas da integração, requisitos do projeto, etc.)
-  - **Análise da documentação:** Como você analisará a documentação para identificar os pontos de teste?
-  - **Mapeamento dos requisitos:** Como você mapeará os requisitos da integração aos pontos de teste?
-  - **Utilização de ferramentas:** Quais ferramentas serão utilizadas para auxiliar na análise da documentação e no mapeamento dos requisitos? (Ex.: ferramentas de gerenciamento de requisitos, ferramentas de análise de texto, etc.)
+Você faz parte da equipe responsável por testar uma nova integração entre o Magazord e um marketplace externo (como Mercado Livre ou Amazon) e também com um ERP de gestão de estoque (como o Bling). A integração envolve a sincronização das seguintes informações:
+- Cadastro e atualização de Preços e Anúncios.
+- Sincronização de Estoque.
+- Descida de Pedidos e Faturamento.
 
-**2. Abrangência dos Testes:**
-  - **Funcionalidades:** Quais funcionalidades da integração serão testadas?
-  - **Casos de uso:** Quais casos de uso serão considerados para cada funcionalidade? (Ex.: cenários de sucesso, cenários de falha, cenários de carga, etc.)
-  - **Priorização dos testes:** Quais critérios serão utilizados para priorizar os testes? (Ex.: criticidade da funcionalidade, impacto no negócio, riscos potenciais, etc.)
+**Sua tarefa:**
+Sem a necessidade de criar um plano de testes extenso, liste de forma objetiva **quais casos de teste principais** você executaria para garantir que essa comunicação entre os sistemas está funcionando corretamente. 
 
-**3. Execução dos Testes:**
-  - **Ambiente de teste:** Qual ambiente de teste será utilizado? (Ex.: ambiente de homologação, ambiente de produção, etc.)
-  - **Dados de teste:** Como você obterá os dados de teste necessparios para os testes? (Ex.: dados de produtos, dados de pedidos, dados de usuários, etc.)
-  - **Ferramentas de automação:** Quais ferramentas de automação serão utilizadas para executar os testes? (Ex.: ferramentas de teste funcional, ferramentas de teste de API, etc.)
-  - **Registro de resultados:** Como você registrará os resultados dos testes? (Ex.: ferramenta de gerenciamento de testes, planilhas eletrônicas, etc.)
+1. Descreva ao menos 3 cenários de sucesso (Caminho Feliz) e 3 cenários de exceção/falha que você testaria.
+2. Como você priorizaria a execução desses testes, considerando o impacto no negócio do cliente?
 
-# 2º Cenário:
+---
 
-Você está trabalhando como Analista de Qualidade em um projeto de integração com a ferramenta de gerenciamento de estoque Bling em um grande e-commerce. A equipe de desenvolvimento concluiu a implementação da integração e você é responsável por realizar os testes para garantir que a funcionalidade esteja funcionando corretamente.
+## 2º Cenário: Investigação de Problemas (Troubleshooting)
 
-## Sua tarefa:
+O cliente entrou em contato devido a uma questão relacionada aos seus anúncios em um marketplace. A regra de negócio padrão diz que: *Quando os itens ficam sem estoque no Magazord (estoque = 0), a integração deve enviar um comando para o marketplace e o anúncio deve assumir o status de "Pausado (sem estoque)".*
 
-Descrever detalhadamente o plano de testes que você implementaria para validar a integração com a ferramenta Bling. Inclua no seu plano:
+**O Problema:**
+Os anúncios do cliente estão ficando apenas com o status "Pausado" no marketplace. Isso faz com que os anúncios permaneçam visíveis e disponíveis para venda, resultando em pedidos de itens que não existem no estoque real. O cliente precisa cancelar essas vendas, o que prejudica severamente sua reputação.
 
-**1. Documentação e Materiais de Apoio:**
-  - **Identificação da documentação:** Quais documentos e materiais de apoio serão utilizados para embasar o plano de testes? (Ex: documentação oficial da Bling, especificações técnicas da integração, requisitos do projeto, etc.)
-  - **Mapeamento dos requisitos:** Como você mapeará os requisitos da integração aos pontos de teste?
-  - **Utilização de ferramentas:** Quais ferramentas serão utilizadas para auxiliar na análise da documentação e no mapeamento dos requisitos? (Ex: ferramentas de gerenciamento de requisitos, ferramentas de análise de texto, etc.)
-
-**2. Abrangência dos Testes:**
-  - **Funcionalidades:** Quais funcionalidades da integração com a Bling serão testadas? (Ex: sincronização de produtos, atualização de estoque, processamento de pedidos, geração de relatórios, etc.)
-  - **Priorização dos testes:** Quais critérios serão utilizados para priorizar os testes? (Ex: criticidade da funcionalidade, impacto no negócio, riscos potenciais, etc.)
-
-**3. Execução dos Testes:**
-  - **Dados de teste:** Como você obterá os dados de teste necessários para os testes? (Ex: dados de produtos, dados de estoque, dados de pedidos, etc.)
-  - **Ferramentas de automação:** Quais ferramentas de automação serão utilizadas para executar os testes? (Ex: ferramentas de teste funcional, ferramentas de teste de API, etc.)
-  - **Registro de resultados:** Como você registrará os resultados dos testes? (Ex: ferramenta de gerenciamento de testes, planilhas eletrônicas, etc.)
-
-# 3º Cenário:
-
-O cliente entrou em contato devido a uma questão relacionada aos seus anúncios. Quando os itens ficam sem estoque, em vez de serem marcados como "Pausado (sem estoque)", eles estão apenas sendo marcados como "Pausado", o que faz com que os anúncios permaneçam disponíveis para venda no Mercado Livre, mesmo sem estoque real. Isso está resultando em pedidos sendo feitos para itens sem estoque disponível, o que prejudica a reputação do cliente, pois ele precisa cancelar as vendas devido à falta de estoque.
-
-Atualmente, o cliente possui 38 anúncios com a situação "Pausado", e ele relata que não os marcou manualmente como pausados.Quando enviamos uma atualização manual de estoque, o anúncio muda para a situação "Pausado sem estoque" e fica indisponível para venda no Mercado Livre.
-Ao verificar o log dos anúncios, não encontramos registros de envio de informação de estoque igual a zero quando o estoque se esgota no Magazord.
-Um exemplo de anúncio afetado é o seguinte: [MLB3097510082](https://produto.mercadolivre.com.br/MLB-3097510082-escultura-em-pedra-pirita-com-cupula-de-acrilico-_JM).
-Envio em anexo um print do anúncio e um print do log, mostrando que não foram encontradas informações registradas na abertura da atividade.
-
-Para o caso acima, descreva quais seriam os passos para analise e identificação do problema tendo em vista a documentação do próprio ML. Visto que não possui acesso ao painel seller do cliente e nem ao painel do mesmo no ERP Magazord, quais seriam as possíveis hipóteses do erro.
+- O cliente possui 38 anúncios nesta situação e relata que não os pausou manualmente.
+- Quando a equipe aciona uma *atualização manual* de estoque pelo sistema, o anúncio atualiza corretamente para "Pausado sem estoque".
+- Ao verificar os logs automáticos dos anúncios, não foram encontrados registros de envio de "estoque = zero" no momento em que o produto esgotou no Magazord.
 
 ![anúncios pausado no magazord e sem estoque](aa.png)
 
-# 4º Cenário:
+**Sua tarefa:**
+Considerando que você não tem acesso ao painel do cliente no marketplace, descreva qual seria o seu **passo a passo de investigação** para esse problema. Quais são as suas principais **hipóteses** do que pode estar causando essa falha na automação?
 
-Você está encarregado de testar a validação de dados cadastrais em um sistema de gerenciamento de usuários. O sistema possui os seguintes campos de cadastro:
+---
 
-- Nome completo
-- E-mail
-- Número de telefone
-- Data de nascimento
-- Endereço (com campos para rua, cidade, estado e CEP)
+## 3º Cenário: Validação de Interface e Regras de Negócio
 
-Houve alterações nos campos mencionados acima no cadastro do cliente, quais testes você faria para validar que o(s) campo(s) esta(ão) funcionando conforme esperado?
+Você está encarregado de validar as alterações cadastrais de um cliente no sistema. A tela possui campos sensíveis e importantes para o faturamento e contato.
 
 ![Alterar pessoa](AlterarPessoa.png)
 
-**Orientação:** Crie casos de teste para validar a entrada de dados nos campos modificados.
+**Sua tarefa:**
+Crie os **casos de teste manuais** (positivos e negativos) que você executaria para validar os campos dessa tela. Considere validações de formato (ex: CPF, E-mail, Telefone), limites de caracteres, campos obrigatórios e comportamentos esperados ao inserir dados inválidos.
+
+*Formato sugerido para a resposta:* Título do Teste, Pré-condições, Passos para Execução e Resultado Esperado.
+
+---
+
+## 4º Cenário: Criação de Casos de Teste (Prática Web)
+
+Queremos ver como você estrutura seus testes em uma aplicação real. Utilize o site de demonstração [SauceDemo](https://www.saucedemo.com) para este cenário.
+
+**Credenciais de acesso:**
+- **Username:** standard_user
+- **Password:** secret_sauce
+
+**Sua tarefa:**
+Navegue pela aplicação e escreva os casos de teste manuais que cubram o **Fluxo Principal de Compra** (Login -> Adicionar produtos ao carrinho -> Checkout -> Finalizar pedido). 
+
+Seja claro e estruturado. Queremos avaliar como você documenta um teste para que outro analista consiga reproduzi-lo sem dificuldades.
+
+---
+
+## 🌟 Bônus / Diferencial: Automação de Testes E2E (Opcional)
+
+Sabemos que testes manuais são o foco principal, mas conhecimentos em automação são um grande diferencial! Se você possui experiência com automação (Cypress, Playwright, Selenium, Robot Framework, etc.), sinta-se à vontade para resolver este desafio. Você pode escolher a linguagem e o framework de sua preferência.
+
+### Contexto (Perguntas Teóricas)
+Em um fluxo de e-commerce real que envolve adição ao carrinho, aplicação de cupom único, pagamento e confirmação:
+- **2.1.a)** Como você garantiria que cada execução do seu teste automatizado utilize um cupom válido e diferente?
+- **2.1.b)** Como você validaria a tela de confirmação de pedido gerado sem depender do recebimento de um e-mail real?
+
+### Teste Prático (SauceDemo)
+Utilizando o mesmo site do Cenário 4 (`https://www.saucedemo.com` com o usuário `standard_user`), automatize o seguinte escopo:
+
+1. **Implemente o fluxo completo de checkout** (Login -> Adicionar produtos -> Checkout -> Finalizar).
+2. **Geração dinâmica de dados** para cada execução nos campos do checkout (Nome, Sobrenome, CEP).
+3. **Validação final** da confirmação do pedido.
+4. **Limpeza e boas práticas** (Limpar cookies/localStorage após ou antes dos testes).
+5. **Padrão de Projeto:** Utilize Page Objects e Fixtures/Mocks para organização do código (se aplicável ao framework escolhido).
+
+*Crie uma pasta chamada `automacao-bonus` no seu repositório para colocar o código deste desafio.*
+
+---
 
 ## Avaliação
 
 > [!IMPORTANT]
-> **Os candidatos serão avaliados com base na clareza, precisão e detalhamento das respostas.**
+> **Os candidatos serão avaliados com base na clareza, precisão e detalhamento das respostas teóricas e práticas.**
 
 > [!IMPORTANT]
-> **A capacidade de compreender e comunicar efetivamente requisitos e problemas é fundamental.**
+> **A capacidade de compreender regras de negócio, investigar falhas (troubleshooting) e comunicar problemas é fundamental.**
 
 > [!IMPORTANT]
-> **A organização e a estrutura das respostas também serão consideradas na avaliação.**
+> **A organização, formatação e a estrutura das respostas no repositório também serão consideradas na avaliação.**
 
 ## Envio do teste
 
 > [!NOTE]
-> **Suba o repositório no seu Github e envie o link diretamente para o seu recrutador.**
+> **Suba este projeto/respostas no seu Github pessoal de forma pública e envie o link diretamente para o seu recrutador.**
 
 > [!WARNING]
-> **Não serão aceitos alterações após o envio, caso precise de mais tempo para implementação do projeto alinhe com o seu recrutador com antecedência.**
+> **Não serão aceitas alterações após o envio. Caso precise de mais tempo para a conclusão, alinhe com o seu recrutador com antecedência.**
