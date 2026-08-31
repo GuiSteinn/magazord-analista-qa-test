@@ -1,0 +1,10 @@
+{
+  "usuario": {
+    "nome": "standard_user",
+    "senha": "secret_sauce"
+  },
+  "produtos": [
+    "Sauce Labs Backpack",
+    "Sauce Labs Bike Light"
+  ]
+}
